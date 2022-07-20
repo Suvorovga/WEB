@@ -1,0 +1,353 @@
+body {
+  background-color: #E5E5E5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 3000px;
+  font-family: 'OpenSans';
+}
+
+h2 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+  url("fonts/OpenSans-Italic-VariableFont_wdth\,wght.woff2") format("woff2"),
+  url("fonts/OpenSans-Italic-VariableFont_wdth\,wght.woff") format("woff");
+  font-weight: 600px;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+  url("fonts/OpenSans-VariableFont_wdth\,wght.woff2") format("woff2"),
+  url("fonts/OpenSans-VariableFont_wdth\,wght.woff") format("woff");
+  font-weight: 400px;
+  font-style: normal;
+  font-display: swap;
+}
+
+.con1 {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: white;
+  display: inline-block;
+  padding: 21px 39px 29px 25px;
+  margin-bottom: 20px;
+  margin-right: 58px;
+}
+
+.con1__list {
+  list-style-type: none;
+}
+
+.con1__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.check__text {
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+  cursor: pointer;
+  padding-left: 29px;
+}
+
+.con1__item:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.checkbox {
+  position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+.check__text::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  left: 0;
+  transition: border-color .3s ease-in-out;
+}
+
+.check__text::after {
+  content: '';
+  position: absolute;
+  background-image: url(img/ch.svg);
+  height: 9px;
+  width: 9px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 4px;
+  top: 2px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.checkbox:checked ~ .check__text::before {
+  border-color: orange;
+}
+
+.checkbox:checked ~ .check__text::after {
+  opacity: 1;
+}
+
+.choices .choices__list.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+.header_choices.choices[data-type*=select-one]:after {
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 20px;
+  transform: translateX(50%);
+  border: 0;
+  background-image: url("img/Mat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform .1s ease-in-out;
+  z-index: 5;
+}
+
+.header_choices.choices[data-type*=select-one].is-open:after {
+  transform: rotate(180deg) translate(-50%, 2px);
+  margin-top: 0;
+}
+
+.header_choices .choices__inner {
+  box-sizing: border-box;
+}
+
+.header_choices {
+  max-width: 176px;
+}
+
+.header_choices .choices__list--dropdown {
+  width: 176px;
+  top: 20px;
+  padding-top: 20px;
+  z-index: 1;
+  border-radius: 10px;
+  border-color: orange  ;
+}
+
+.header_choices .choices__inner {
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.header_choices.is-open .choices__inner {
+  border-radius: 10px 10px 10px 10px;
+  border-color: orange;
+  background-image: url(img/Mat2.svg);
+  background-repeat: no-repeat;
+  background-position: top 55% right 15px;
+  z-index: 6;
+}
+
+.choices .choices__list .choices__item.is-selected {
+  display: none;
+}
+
+.choices .option {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.choices__inner {
+  padding: 9px 12px 11px 15px;
+  width: 178px;
+  transition: bordercolor .3s ease-in-out;
+}
+
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__item--selectable:after  {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 0;
+}
+
+.con2 {
+  margin-right: 58px;
+}
+
+[class*='ground-pane'] {
+  filter: grayscale(1);
+}
+
+#myMap1 {
+  margin-right: 58px;
+}
+
+.scroll {
+  width: 399px;
+  height: 310px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #333333;
+  background-color: white;
+  padding: 20px 30px 0 29px;
+  margin-right: 58px;
+}
+
+.simplebar-scrollbar::before {
+  background-color: orange;
+  height: 70px;
+}
+
+.con5 {
+  margin-right: 58px;
+  padding: 38px 30px 39px 30px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.val-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form__input {
+  margin-bottom: 31px;
+  width: 360px;
+  height: 60px;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+.form-group__btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 18.5px 53px;
+  background-color:#FF5C00;
+  border-radius: 10px;
+}
+
+.fl {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.js-validate-error-label {
+  padding-left: 20px;
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+}
+
+
+.tooltip {
+  width: 375px;
+  height: 160px;
+  padding: 20px 78px 20px 29px;
+  background-color: white;
+}
+
+.too-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #333333;
+}
+
+.popup {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  background-color: gray;
+  width: 163px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  top: -37px;
+  right: -68px;
+  transition: opacity .3s ease-in-out;
+}
+
+.i {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+}
+
+.i path {
+  transition: fill .3s ease-in-out;
+}
+
+.i:hover .popup {
+  opacity: 1;
+}
+
+.i:hover path {
+  fill: orange;
+}
+
+.popup::after {
+  content: '';
+  position: absolute; /* Абсолютное позиционирование */
+  left: 71px;
+  bottom: -16px; /* Положение треугольника */
+  border: 10px solid transparent; /* Прозрачные границы */
+  border-top: 10px solid gray; /* Добавляем треугольник */
+}
+
